@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Claude Code internal files
+.claude/
+
+# Next.js
+promptgpu/.next/
+promptgpu/out/
+
+# Dependencies
+promptgpu/node_modules/
+
+# Environment variables (contains API keys)
+promptgpu/.env.local
+promptgpu/.env*.local
+
+# Build artifacts
+promptgpu/tsconfig.tsbuildinfo
+
+# Vercel
+.vercel

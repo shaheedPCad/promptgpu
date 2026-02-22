@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #09090b;
+  color: #fafafa;
+}
+
+@theme {
+  --font-display: var(--font-ibm-plex-mono), ui-monospace, monospace;
+  --font-body: var(--font-instrument-sans), ui-sans-serif, system-ui;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes scan-fade {
+  0% { opacity: 0; transform: translateY(-4px); }
+  50% { opacity: 0.6; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(4px); }
+}
