@@ -116,11 +116,11 @@ The studio at `/studio` uses a nested layout that enforces `h-screen overflow-hi
 
 ```bash
 git clone https://github.com/shaheedPCad/promptgpu.git
-cd promptgpu/promptgpu
+cd promptgpu
 npm install
 ```
 
-Create `promptgpu/.env.local`:
+Create `.env.local` at the repo root:
 
 ```env
 ANTHROPIC_API_KEY=sk-ant-...
@@ -130,7 +130,6 @@ OPENAI_API_KEY=sk-...
 ### Run
 
 ```bash
-# from the promptgpu/ subdirectory
 npm run dev
 ```
 
@@ -142,44 +141,44 @@ Open [http://localhost:3000/studio](http://localhost:3000/studio) — shader stu
 ## Project Structure
 
 ```
-promptgpu/          (repo root)
+/                       (repo root = Next.js app root)
 ├── README.md
 ├── PLAN.md
-└── promptgpu/      (Next.js app)
-    ├── app/
-    │   ├── layout.tsx        Root layout — font variables, metadata
-    │   ├── page.tsx          Landing page (server component)
-    │   ├── globals.css       Tailwind v4, @theme font tokens, keyframes
-    │   ├── studio/
-    │   │   ├── layout.tsx    h-screen overflow-hidden wrapper
-    │   │   └── page.tsx      Shader studio
-    │   └── api/
-    │       └── generate/
-    │           └── route.ts  AI → WGSL endpoint
-    ├── components/
-    │   ├── Canvas.tsx
-    │   ├── CanvasWrapper.tsx
-    │   ├── Chat.tsx
-    │   ├── ErrorBar.tsx
-    │   ├── ModelSwitcher.tsx
-    │   ├── SceneControls.tsx
-    │   └── landing/
-    │       ├── LandingNav.tsx
-    │       ├── HeroSection.tsx
-    │       ├── HeroCanvas.tsx
-    │       ├── HeroCanvasWrapper.tsx
-    │       ├── FeaturesSection.tsx
-    │       ├── HowItWorksSection.tsx
-    │       └── CtaSection.tsx
-    ├── engine/
-    │   ├── device.ts
-    │   ├── renderer.ts
-    │   ├── shaderRunner.ts
-    │   └── types.ts
-    └── lib/
-        ├── llm.ts
-        ├── prompts.ts
-        └── store.ts
+├── package.json
+├── app/
+│   ├── layout.tsx        Root layout — font variables, metadata
+│   ├── page.tsx          Landing page (server component)
+│   ├── globals.css       Tailwind v4, @theme font tokens, keyframes
+│   ├── studio/
+│   │   ├── layout.tsx    h-screen overflow-hidden wrapper
+│   │   └── page.tsx      Shader studio
+│   └── api/
+│       └── generate/
+│           └── route.ts  AI → WGSL endpoint
+├── components/
+│   ├── Canvas.tsx
+│   ├── CanvasWrapper.tsx
+│   ├── Chat.tsx
+│   ├── ErrorBar.tsx
+│   ├── ModelSwitcher.tsx
+│   ├── SceneControls.tsx
+│   └── landing/
+│       ├── LandingNav.tsx
+│       ├── HeroSection.tsx
+│       ├── HeroCanvas.tsx
+│       ├── HeroCanvasWrapper.tsx
+│       ├── FeaturesSection.tsx
+│       ├── HowItWorksSection.tsx
+│       └── CtaSection.tsx
+├── engine/
+│   ├── device.ts
+│   ├── renderer.ts
+│   ├── shaderRunner.ts
+│   └── types.ts
+└── lib/
+    ├── llm.ts
+    ├── prompts.ts
+    └── store.ts
 ```
 
 ---
