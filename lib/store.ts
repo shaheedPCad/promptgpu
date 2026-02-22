@@ -9,8 +9,8 @@ export interface Message {
 }
 
 interface Store {
-  model: 'claude' | 'gpt4o';
-  setModel(m: 'claude' | 'gpt4o'): void;
+  model: 'gpt4o';
+  setModel(m: 'gpt4o'): void;
 
   messages: Message[];
   addMessage(m: Message): void;
@@ -35,7 +35,7 @@ interface Store {
 }
 
 export const useStore = create<Store>((set) => ({
-  model: 'claude',
+  model: 'gpt4o',
   setModel: (m) => set({ model: m }),
 
   messages: [],
